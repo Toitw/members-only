@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController
     def index
         @comments = Comment.all
+    end
+
+    def new
         @comment = Comment.new
     end
 
@@ -21,7 +24,7 @@ class CommentsController < ApplicationController
     private
     
     def comment_params
-        params.require(:comment).permit(:title, :content, :user_id)
+        params.require(:comment).permit(:title, :content)
     end
       
 end
