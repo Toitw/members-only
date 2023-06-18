@@ -20,6 +20,10 @@
 <div id="comments">
   <% @comments.each do |comment| %>
     <div class="comment">
+    <!-- If user is logged in the username of author is visible-->
+        <% if user_signed_in? %>
+            <p><%= comment.user.email %></p>
+        <% end %>
       <h3><%= comment.title %></h3>
       <p><%= comment.content %></p>
     </div>
