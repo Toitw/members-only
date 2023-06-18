@@ -1,0 +1,11 @@
+<h1>Comments</h1>
+<!--Add a link to add a comment-->
+<%= link_to "Add a comment", new_comment_path, data: { turbo_frame: "new_comment" } %>
+
+<div id="comments">
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p><%= comment.content %></p>
+    </div>
+  <% end %>
+</div>
