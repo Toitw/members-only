@@ -11,9 +11,13 @@ class CommentsController < ApplicationController
     def create
         puts params.inspect
         @comment = Comment.new(comment_params)
-        @comment.user = current_user
+        if user_signed_in?
+            @comment.user_id = current_user.id
+        else
+            @comment.user_id = 1
+        end
+
         if @comment.save
-            puts "good"
             redirect_to comments_path
         else
             render :new
