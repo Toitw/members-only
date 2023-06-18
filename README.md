@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Discussion Forum
 
-Things you may want to cover:
+Discussion Forum is a simple web application built with Ruby on Rails. It allows users to post comments and engage in discussions on various topics.
 
-* Ruby version
+## Features
 
-* System dependencies
+- User registration and login: Users can create accounts and log in to the forum.
+- Guest access: Guests can post comments without registering or logging in.
+- Posting comments: Users and guests can create comments on different topics.
+- Viewing comments: Comments can be viewed on the forum's main page.
+- Viewing username: Only logged members can view the username of the post author.
+- No editing or deleting: Comments cannot be edited or deleted once posted.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
