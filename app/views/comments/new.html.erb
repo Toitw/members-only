@@ -1,16 +1,22 @@
 <h1>New Comment</h1>
 
-<%= form_with(model: @comment, url: comments_path, local: true, data: { turbo_action: "submit" }) do |form| %>
-    <div class="field">
-    <!--title-->
+
+<%= form_with(model: @comment, url: comments_path) do |form| %>
+  <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
-    </div>
+  </div>
+
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
   </div>
+
   <div class="actions">
-    <%= form.submit "Create Comment" %>
+    <%= form.submit "Save comment" %>
   </div>
 <% end %>
+
+<!-- Link to go back -->
+<%= link_to "Back", comments_path %>
+

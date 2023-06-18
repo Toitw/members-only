@@ -1,4 +1,19 @@
 <h1>Comments</h1>
+
+<!-- I want a text saying 'hello <username> you are logged in' when the user is logged in, if not just guest-->
+<% if user_signed_in? %>
+  <p>Hello <%= current_user.email %> you are logged in</p>
+<% else %>
+    <p>Guest</p>
+<% end %>
+
+<!-- IF user is logged in a button to sign out, if it is not logged in, a button to log in -->
+<% if user_signed_in? %>
+  <%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %>
+<% else %>
+    <%= link_to "Log in", new_user_session_path %>
+<% end %>
+
 <!--Add a link to add a comment-->
 <%= link_to "Add a comment", new_comment_path, data: { turbo_frame: "new_comment" } %>
 

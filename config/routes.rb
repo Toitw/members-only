@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :comments, only: [:index, :new, :create]
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: 'home#index'
+  root to: 'comments#index'
 end
